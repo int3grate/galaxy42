@@ -1,7 +1,7 @@
 #ifndef FLEET
 #define FLEET
 
-class Fleet {
+class Fleet : public CelestialObject {
 
 };
 

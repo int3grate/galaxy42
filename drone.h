@@ -1,7 +1,7 @@
 #ifndef DRONE
 #define DRONE
 
-class Drone {
+class Drone : public CelestialObject {
 
 };
 

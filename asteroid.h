@@ -1,7 +1,7 @@
 #ifndef ASTEROID
 #define ASTEROID
 
-class Asteroid {
+class Asteroid : public CelestialObject {
 
 
 };

@@ -2,10 +2,11 @@
 #define GALAXY
 
 #include <vector>
+#include "solar_system.h"
 
 class Galaxy {
 
-    std::vector<vector<SolarSystem>> galaxy_map;
+    std::vector<vector<SolarSystem *>> galaxy_map;
     int x_parsecs, y_parsecs;
 
     void setupNewGame (void);

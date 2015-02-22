@@ -1,7 +1,7 @@
 #ifndef NEBULA
 #define NEBULA
 
-class Nebula {
+class Nebula : public CelestialObject {
 
 };
 

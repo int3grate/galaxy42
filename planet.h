@@ -1,7 +1,7 @@
 #ifndef PLANET
 #define PLANET
 
-class Planet {
+class Planet : public CelestialObject {
 
 };
 

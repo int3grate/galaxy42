@@ -1,7 +1,7 @@
 #ifndef SHIP
 #define SHIP
 
-class Ship {
+class Ship : public CelestialObject {
 
 };
 

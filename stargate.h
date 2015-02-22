@@ -1,7 +1,7 @@
 #ifndef STARGATE
 #define STARGATE
 
-class Stargate {
+class Stargate : public CelestialOject  {
 
 
 };

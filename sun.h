@@ -1,7 +1,7 @@
 #ifndef SUN
 #define SUN
 
-class Sun {
+class Sun : public CelestialObject {
 
 };
 

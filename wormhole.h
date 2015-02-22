@@ -1,7 +1,7 @@
 #ifndef WORMHOLE
 #define WORMHOLE
 
-class Wormhole {
+class Wormhole : public CelestialObject {
 
 };
 
