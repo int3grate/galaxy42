@@ -7,8 +7,11 @@ class CelestialObect {
     SolarSystem * solarSystem;
     int x_parsec_loc, y_parsec_loc;
 
-  public int * getLocation (void); 
-    
+  public:
+    int * getCoords (void); 
+    SolarSystem * getSolarSystem (void);
+  
+    virtual std:string getObjectName(void);  
 };
 
 #endif
