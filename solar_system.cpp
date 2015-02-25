@@ -11,4 +11,9 @@ SolarSystem::SolarSystem(int x, int y)
   y_pos = y;
 }
 
+void SolarSystem::populateSolarSystem(void)
+{
+
+
+}
 

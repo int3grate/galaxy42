@@ -15,15 +15,15 @@
 
 class SolarSystem {
 
-  enum SPACE_OBJECTS {SUN};
+    enum SPACE_OBJECTS {SUN};
+    static const int num_types = 3;
+    int x_pos, y_pos;
 
-  static const int num_types = 3;
-
-  int x_pos, y_pos;
+    void populateSolarSystem(void);
 
   public:
     int type;
-    SolarSystem (int x, int y); 
+    SolarSystem (int x, int y);
 
 };
 
