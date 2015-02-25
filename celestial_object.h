@@ -12,6 +12,8 @@ class CelestialObect {
     SolarSystem * getSolarSystem (void);
   
     virtual std:string getObjectName(void);  
+
+
 };
 
 #endif
