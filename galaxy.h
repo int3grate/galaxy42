@@ -18,8 +18,6 @@ class Galaxy {
 
     enum SS_TYPES {TYPE_SPARSE, TYPE_NORMAL, TYPE_DENSE};
 
-//    static double SS_EXISTS_PROB () { return .03; } 
-
   public:
     Galaxy (int x_parsecs, int y_parsecs); 
     Galaxy (void);
