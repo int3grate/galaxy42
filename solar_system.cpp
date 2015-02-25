@@ -1,5 +1,6 @@
 #include "solar_system.h"
 
+
 SolarSystem::SolarSystem(int x, int y)
 {
   // randomly select solar system type
