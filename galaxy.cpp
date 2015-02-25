@@ -25,10 +25,9 @@ void Galaxy::setupNewGame()
     std::vector<SolarSystem *> v_tmp;
     for (int y=0; y<y_parsecs; y++)
     {
-      SolarSystem * s_tmp;
       double r = ((double) std::rand() / (RAND_MAX));
       if(r < SS_EXISTS_PROB)
-        v_tmp.push_back(new SolarSystem);
+        v_tmp.push_back(new SolarSystem(x, y));
       else
         v_tmp.push_back(NULL);
 

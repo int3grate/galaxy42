@@ -1,8 +1,13 @@
 #include "solar_system.h"
 
-SolarSystem::SolarSystem(void)
+SolarSystem::SolarSystem(int x, int y)
 {
   // randomly select solar system type
   double r = ((double) std::rand() / (RAND_MAX));
-  type =(int) (r * num_types); 
+  type =(int) (r * num_types);
+
+  x_pos = x;
+  y_pos = y;
 }
+
+
