@@ -16,9 +16,7 @@ class Galaxy {
  
     void setupNewGame (void);
 
-    static const int TYPE_SPARSE = 0;
-    static const int TYPE_NORMAL = 1;
-    static const int TYPE_DENSE = 2;
+    enum SS_TYPES {TYPE_SPARSE, TYPE_NORMAL, TYPE_DENSE};
 
 //    static double SS_EXISTS_PROB () { return .03; } 
 
