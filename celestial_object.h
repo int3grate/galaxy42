@@ -1,19 +1,19 @@
 #ifndef CELESTIAL_OBJECT
 #define CELESTIAL_OBJECT
 
-class CelestialObect {
+#include <string>
+
+class CelestialObject {
 
   protected:
-    SolarSystem * solarSystem;
     int x_parsec_loc, y_parsec_loc;
+    int max_objects;
+    std::string object_name;
 
   public:
     int * getCoords (void); 
-    SolarSystem * getSolarSystem (void);
-  
-    virtual std:string getObjectName(void);  
-
-
+    virtual std::string getObjectName(void);  
+    int getMaxObjects(void);
 };
 
 #endif
