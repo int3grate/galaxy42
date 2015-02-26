@@ -1,12 +1,13 @@
 #include "sun.h"
 
-Sun::Sun(void)
+Sun::Sun(int x, int y) : CelestialObject(x, y)
 {
+  min_objects = 1;
   max_objects = 2;
-  object_name = "sun";
-
+  object_name = "SUN";
+  probability = .001;
+  
   // generate random mass for sun
-  std::srand(std::time(nullptr));
   mass = std::rand() % 10 + 1;
 }
 
