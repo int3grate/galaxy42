@@ -13,6 +13,8 @@ SolarSystem::SolarSystem(int x, int y)
   setSize(40,40);
 
   populateSolarSystem();
+
+  if(debug_mode) DebugPrintSolarSystem();
 }
 
 void SolarSystem::setSize(int x, int y)
@@ -65,13 +67,33 @@ void SolarSystem::populateSolarSystem(void)
               ss_map[x][y] = new Sun(x, y);
             // TBD - more objects here
             num_objects++;
-            if(num_objects > max_objects) break;
+            if(num_objects >= max_objects) break;
           }
         }
-        if(num_objects > max_objects) break;
+        if(num_objects >= max_objects) break;
       }
-      if(num_objects > max_objects) break;
+      if(num_objects >= max_objects) break;
     }
   }
 }
 
+void SolarSystem::DebugPrintSolarSystem(void)
+{
+  std::cout << "Debug Solar System Map : " << std::endl;
+  for(int y=0; y<y_au; y++)
+  {
+    for(int x=0; x<x_au; x++)
+    {
+      if(ss_map[x][y] == NULL)
+        std::cout << '.';
+      else
+      {
+        if(ss_map[x][y]->type == SS_SUN)
+          std::cout << '*';
+        else
+          std::cout << "[ERROR]";
+      }
+    }
+    std::cout << std::endl;
+  } 
+}

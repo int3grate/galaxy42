@@ -6,6 +6,7 @@
 class CelestialObject {
 
   protected:
+    enum SS_OBJECTS {SS_SUN};
     int x_parsec_loc, y_parsec_loc;
     int max_objects;
     int min_objects;
@@ -13,6 +14,7 @@ class CelestialObject {
     std::string object_name;
 
   public:
+    int type;
     int * getCoords (void); 
     virtual std::string getObjectName(void);  
     int getMaxObjects(void);

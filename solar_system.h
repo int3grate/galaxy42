@@ -22,6 +22,8 @@
 
 class SolarSystem {
 
+    static const int debug_mode = 1;
+
     static const int object_types = 1;
     static const int num_ss_types = 3;
     
@@ -37,6 +39,7 @@ class SolarSystem {
     int type;
     SolarSystem (int x, int y);
     void setSize(int x, int y); 
+    void DebugPrintSolarSystem(void);
 };
 
 #endif

@@ -6,6 +6,8 @@ Sun::Sun(int x, int y) : CelestialObject(x, y)
   max_objects = 2;
   object_name = "SUN";
   probability = .001;
+
+  type = SS_SUN;
   
   // generate random mass for sun
   mass = std::rand() % 10 + 1;
