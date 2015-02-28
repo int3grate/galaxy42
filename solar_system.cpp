@@ -53,7 +53,6 @@ void SolarSystem::populateSolarSystem(void)
     int min_objects = celestial_object->getMinObjects();
 
     double prob = celestial_object->getProbability(); 
-
     int num_objects = 0;
 
     while(num_objects < min_objects)
@@ -65,6 +64,7 @@ void SolarSystem::populateSolarSystem(void)
           if(ss_map[x][y] != NULL) continue;
 
           double r = ((double) std::rand() / (RAND_MAX));
+          
           if(r < prob)
           {
             if(i == SS_SUN)
