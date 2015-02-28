@@ -27,6 +27,9 @@ class SolarSystem {
 
     static const int object_types = 4;
     static const int num_ss_types = 3;
+
+    static const int x_default_width = 20;
+    static const int y_default_width = 20;
     
     int x_pos, y_pos;
     int x_au, y_au;

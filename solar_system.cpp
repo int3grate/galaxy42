@@ -12,7 +12,7 @@ SolarSystem::SolarSystem(int x, int y)
   x_pos = x;
   y_pos = y;
 
-  setSize(40,40);
+  setSize(x_default_width, y_default_width);
 
   populateSolarSystem();
 

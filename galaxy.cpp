@@ -4,8 +4,8 @@
 // constructors
 Galaxy::Galaxy()
 {
-  x_parsecs = 30;
-  y_parsecs = 30;
+  x_parsecs = x_default_width;
+  y_parsecs = y_default_width;
   setupNewGame(); 
 }
 
