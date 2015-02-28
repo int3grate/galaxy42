@@ -7,9 +7,9 @@
 
 // Randomly created during map generation
 #include "sun.h"
+#include "planet.h"
 /*
 #include "nebula.h"
-#include "planet.h"
 #include "asteroid.h"
 #include "wormhole.h"
 */
@@ -24,7 +24,7 @@ class SolarSystem {
 
     static const int debug_mode = 1;
 
-    static const int object_types = 1;
+    static const int object_types = 2;
     static const int num_ss_types = 3;
     
     int x_pos, y_pos;
