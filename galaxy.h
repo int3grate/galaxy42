@@ -3,9 +3,7 @@
 
 #include <vector>
 #include <string>
-//#include <cstdlib>
 #include <iostream>
-//#include <ctime>
 #include <random>
 #include "solar_system.h"
 

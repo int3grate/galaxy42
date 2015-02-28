@@ -53,6 +53,11 @@ void SolarSystem::populateSolarSystem(void)
       Planet planet(0,0);
       celestial_object = &planet;
     }
+    else if(i == SS_ASTEROID)
+    {
+      Asteroid asteroid(0,0);
+      celestial_object = &asteroid;
+    }
 
     int max_objects = celestial_object->getMaxObjects();
     int min_objects = celestial_object->getMinObjects();
@@ -76,6 +81,8 @@ void SolarSystem::populateSolarSystem(void)
               ss_map[x][y] = new Sun(x, y);
             if(i == SS_PLANET)
               ss_map[x][y] = new Planet(x, y);
+            if(i == SS_ASTEROID)
+              ss_map[x][y] = new Asteroid(x, y);
             // TBD - more objects here
             num_objects++;
             if(num_objects >= max_objects) break;
@@ -102,7 +109,9 @@ void SolarSystem::DebugPrintSolarSystem(void)
         if(ss_map[x][y]->type == SS_SUN)
           std::cout << '*';
         else if(ss_map[x][y]->type == SS_PLANET)
-          std::cout << 'o';
+          std::cout << '@';
+        else if(ss_map[x][y]->type == SS_ASTEROID)
+          std::cout << '~';
         else
           std::cout << "[ERROR]";
       }
