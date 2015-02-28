@@ -3,7 +3,7 @@
 
 #include <string>
 
-enum SS_OBJECTS {SS_SUN, SS_PLANET, SS_ASTEROID};
+enum SS_OBJECTS {SS_SUN, SS_PLANET, SS_ASTEROID, SS_NEBULA};
 
 class CelestialObject {
 
