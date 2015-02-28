@@ -20,6 +20,7 @@ Galaxy::Galaxy(int x_size, int y_size)
 void Galaxy::setupNewGame()
 {
   std::default_random_engine generator;
+  generator.seed(time(0));
   std::uniform_real_distribution<double> distribution(0.0,1.0);
   double r;
 

@@ -28,6 +28,7 @@ void SolarSystem::setSize(int x, int y)
 void SolarSystem::populateSolarSystem(void)
 {
   std::default_random_engine generator;
+  generator.seed(time(0));
   std::uniform_real_distribution<double> distribution(0.0,1.0);
 
   // initialize empty map 
