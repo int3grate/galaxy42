@@ -2,8 +2,7 @@
 #define SUN
 
 #include "celestial_object.h"
-#include <cstdlib>
-#include <ctime>
+#include <random>
 
 class Sun : public CelestialObject {
 

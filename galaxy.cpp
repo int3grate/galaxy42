@@ -19,13 +19,16 @@ Galaxy::Galaxy(int x_size, int y_size)
 // create a new game map
 void Galaxy::setupNewGame()
 {
-  std::srand(std::time(nullptr));
+  std::default_random_engine generator;
+  std::uniform_real_distribution<double> distribution(0.0,1.0);
+  double r;
+
   for (int x=0; x<x_parsecs; x++)
   {
     std::vector<SolarSystem *> v_tmp;
     for (int y=0; y<y_parsecs; y++)
     {
-      double r = ((double) std::rand() / (RAND_MAX));
+      r = distribution(generator);
       if(r < SS_EXISTS_PROB)
         v_tmp.push_back(new SolarSystem(x, y));
       else

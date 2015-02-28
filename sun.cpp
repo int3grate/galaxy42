@@ -10,7 +10,10 @@ Sun::Sun(int x, int y) : CelestialObject(x, y)
   type = SS_SUN;
   
   // generate random mass for sun
-  mass = std::rand() % 10 + 1;
+  std::random_device rd;
+  std::mt19937 generator(rd());
+  std::uniform_int_distribution<> distribution(0,10);
+  mass = distribution(generator);
 }
 
 // returns mass, int 1-10

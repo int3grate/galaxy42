@@ -3,10 +3,12 @@
 
 SolarSystem::SolarSystem(int x, int y)
 {
-	// randomly select solar system type
-  double r = ((double) std::rand() / (RAND_MAX));
-  type =(int) (r * num_ss_types);
+  std::random_device rd;
+  std::mt19937 generator(rd());
+  std::uniform_int_distribution<> distribution(0,num_ss_types-1);
 
+  type = distribution(generator);
+  std::cout << type << std::endl;
   x_pos = x;
   y_pos = y;
 
@@ -25,6 +27,9 @@ void SolarSystem::setSize(int x, int y)
 
 void SolarSystem::populateSolarSystem(void)
 {
+  std::default_random_engine generator;
+  std::uniform_real_distribution<double> distribution(0.0,1.0);
+
   // initialize empty map 
   for (int y=0; y<x_au; y++)
   {
@@ -55,6 +60,7 @@ void SolarSystem::populateSolarSystem(void)
     double prob = celestial_object->getProbability(); 
     int num_objects = 0;
 
+    double r;
     while(num_objects < min_objects)
     {
       for (int y=0; y<y_au; y++)
@@ -63,8 +69,7 @@ void SolarSystem::populateSolarSystem(void)
         {
           if(ss_map[x][y] != NULL) continue;
 
-          double r = ((double) std::rand() / (RAND_MAX));
-          
+          r = distribution(generator);
           if(r < prob)
           {
             if(i == SS_SUN)

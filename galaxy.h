@@ -3,9 +3,10 @@
 
 #include <vector>
 #include <string>
-#include <cstdlib>
+//#include <cstdlib>
 #include <iostream>
-#include <ctime>
+//#include <ctime>
+#include <random>
 #include "solar_system.h"
 
 #define SS_EXISTS_PROB .03

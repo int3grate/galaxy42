@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <random>
 #include "celestial_object.h"
 
 // Randomly created during map generation
