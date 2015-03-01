@@ -66,7 +66,6 @@ void Galaxy::DebugPrintGalaxy(void)
   } 
 }
 
-// TBD
 void Galaxy::configureWormholes(void)
 {
   Wormhole * wh;
