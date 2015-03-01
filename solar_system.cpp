@@ -1,7 +1,6 @@
 #include "solar_system.h"
 
-
-SolarSystem::SolarSystem(int x, int y)
+SolarSystem::SolarSystem(int x, int y, Galaxy * g)
 {
   std::random_device rd;
   std::mt19937 generator(rd());
@@ -10,6 +9,7 @@ SolarSystem::SolarSystem(int x, int y)
   type = distribution(generator);
   x_pos = x;
   y_pos = y;
+  galaxy = g;
 
   setSize(x_default_width, y_default_width);
 

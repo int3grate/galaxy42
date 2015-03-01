@@ -12,6 +12,7 @@
 #include "asteroid.h"
 #include "nebula.h"
 #include "stargate.h"
+
 /*
 #include "wormhole.h"
 */
@@ -21,6 +22,7 @@
 #include "drone.h"
 #include "ship.h"
 */
+class Galaxy;
 
 class SolarSystem {
 
@@ -39,10 +41,11 @@ class SolarSystem {
     std::vector<std::vector<CelestialObject *> > ss_map;
 
     Stargate * stargate;
+    Galaxy * galaxy;
 
   public:
     int type;
-    SolarSystem (int x, int y);
+    SolarSystem (int x, int y, Galaxy * g);
     void setSize(int x, int y); 
     void DebugPrintSolarSystem(void);
 };

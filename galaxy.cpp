@@ -30,7 +30,7 @@ void Galaxy::setupNewGame()
     {
       r = distribution(generator);
       if(r < SS_EXISTS_PROB)
-        v_tmp.push_back(new SolarSystem(x, y));
+        v_tmp.push_back(new SolarSystem(x, y, this));
       else
         v_tmp.push_back(NULL);
 
@@ -51,7 +51,6 @@ void Galaxy::DebugPrintGalaxy(void)
         std::cout << '.';
       else
       {
-        //std::cout << galaxy_map[x][y]->type << std::endl;
         if(galaxy_map[x][y]->type == TYPE_SPARSE)
           std::cout << 'S';
         else if(galaxy_map[x][y]->type == TYPE_NORMAL)

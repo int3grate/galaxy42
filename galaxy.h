@@ -6,6 +6,7 @@
 #include <iostream>
 #include <random>
 #include "solar_system.h"
+#include "wormhole.h"
 
 #define SS_EXISTS_PROB .03
 
@@ -14,6 +15,8 @@ class Galaxy {
     int x_parsecs, y_parsecs;
     static const int x_default_width = 10;
     static const int y_default_width = 10;
+
+    std::vector<Wormhole *> wormholes;
  
     void setupNewGame (void);
 
