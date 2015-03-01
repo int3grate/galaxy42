@@ -74,27 +74,31 @@ void SolarSystem::populateSolarSystem(void)
 
     while(num_objects < min_objects)
     {
-      for (int x=0; x<x_au; x++)
+     for (int j=0; j<=type; j++)
       {
-        for (int y=0; y<y_au; y++)
+        for (int x=0; x<x_au; x++)
         {
-          if(ss_map[x][y] != NULL) continue;
-
-          r = distribution(generator);
-          if(r < prob)
+          for (int y=0; y<y_au; y++)
           {
-            if(i == SS_SUN)
-              ss_map[x][y] = new Sun(x, y);
-            if(i == SS_PLANET)
-              ss_map[x][y] = new Planet(x, y);
-            if(i == SS_ASTEROID)
-              ss_map[x][y] = new Asteroid(x, y);
-            if(i == SS_NEBULA)
-              ss_map[x][y] = new Nebula(x, y);
-            // TBD - more objects here
-            num_objects++;
-            if(num_objects >= max_objects) break;
+            if(ss_map[x][y] != NULL) continue;
+
+            r = distribution(generator);
+            if(r < prob)
+            {
+              if(i == SS_SUN)
+                ss_map[x][y] = new Sun(x, y);
+              if(i == SS_PLANET)
+                ss_map[x][y] = new Planet(x, y);
+              if(i == SS_ASTEROID)
+                ss_map[x][y] = new Asteroid(x, y);
+              if(i == SS_NEBULA)
+                ss_map[x][y] = new Nebula(x, y);
+              // TBD - more objects here
+              num_objects++;
+              if(num_objects >= max_objects) break;
+            }
           }
+          if(num_objects >= max_objects) break;
         }
         if(num_objects >= max_objects) break;
       }
