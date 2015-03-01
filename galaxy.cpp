@@ -70,11 +70,12 @@ void Galaxy::DebugPrintGalaxy(void)
 // TBD
 void Galaxy::configureWormholes(void)
 {
+  Wormhole * wh;
+  
   // make even number of wormholes
   if(wormholes.size() % 2 != 0)
   {
     // delete one wormhole to get an even number
-    Wormhole * wh;
     wh = wormholes.back();
     wormholes.pop_back();
     int x_coord = wh->solar_system->x_pos;
@@ -83,7 +84,16 @@ void Galaxy::configureWormholes(void)
     wh->solar_system->ss_map[x_coord][y_coord] = NULL;
     delete wh;
   }
-  
+
+  // randomly shuffle wormholes 
+  std::random_device rd;
+  std::mt19937 generator(rd());
+  std::shuffle(wormholes.begin(), wormholes.end(), generator); 
+
   // select two at a time and link them
-  // return
+  for (int i=0; i<wormholes.size(); i+=2)
+  {
+    wormholes[i]->sister = wormholes[i+1];
+    wormholes[i+1]->sister = wormholes[i];
+  }
 }
