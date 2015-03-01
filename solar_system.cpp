@@ -68,7 +68,11 @@ void SolarSystem::populateSolarSystem(void)
       Stargate stargate(0,0);
       celestial_object = &stargate;
     }
-
+    else if(i == SS_WORMHOLE)
+    {
+      Wormhole wormhole(0,0);
+      celestial_object = &wormhole;
+    }
     int max_objects = celestial_object->getMaxObjects();
     int min_objects = celestial_object->getMinObjects();
 
@@ -92,17 +96,20 @@ void SolarSystem::populateSolarSystem(void)
             {
               if(i == SS_SUN)
                 ss_map[x][y] = new Sun(x, y);
-              if(i == SS_PLANET)
+              else if(i == SS_PLANET)
                 ss_map[x][y] = new Planet(x, y);
-              if(i == SS_ASTEROID)
+              else if(i == SS_ASTEROID)
                 ss_map[x][y] = new Asteroid(x, y);
-              if(i == SS_NEBULA)
+              else if(i == SS_NEBULA)
                 ss_map[x][y] = new Nebula(x, y);
-              if(i == SS_STARGATE)
+              else if(i == SS_STARGATE)
               {
                 ss_map[x][y] = new Stargate(x, y);
                 stargate = (Stargate *) ss_map[x][y];
               }
+              else if(i == SS_WORMHOLE)
+                ss_map[x][y] = new Wormhole(x,y);
+
               num_objects++;
               if(num_objects >= max_objects) break;
             }
@@ -140,6 +147,8 @@ void SolarSystem::DebugPrintSolarSystem(void)
           std::cout << '#';
         else if(ss_map[x][y]->type == SS_STARGATE)
           std::cout << "%";  
+        else if(ss_map[x][y]->type == SS_WORMHOLE)
+          std::cout << "&";  
       else
           std::cout << "[ERROR]";
       }

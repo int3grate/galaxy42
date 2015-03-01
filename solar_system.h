@@ -12,10 +12,7 @@
 #include "asteroid.h"
 #include "nebula.h"
 #include "stargate.h"
-
-/*
 #include "wormhole.h"
-*/
 
 /*
 // Player created
@@ -28,7 +25,7 @@ class SolarSystem {
 
     static const int debug_mode = 1;
 
-    static const int object_types = 5;
+    static const int object_types = 6;
     static const int num_ss_types = 3;
 
     static const int x_default_width = 20;
