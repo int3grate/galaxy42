@@ -37,6 +37,8 @@ void Galaxy::setupNewGame()
     }
     galaxy_map.push_back(v_tmp);
   }
+
+  configureWormholes(); 
 }
 
 // print out map of galaxy for debugging
