@@ -1,6 +1,5 @@
 #include "galaxy.h"
 
-
 // constructors
 Galaxy::Galaxy()
 {

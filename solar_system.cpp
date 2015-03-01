@@ -8,7 +8,6 @@ SolarSystem::SolarSystem(int x, int y)
   std::uniform_int_distribution<> distribution(0,num_ss_types-1);
 
   type = distribution(generator);
-  std::cout << type << std::endl;
   x_pos = x;
   y_pos = y;
 
@@ -32,10 +31,10 @@ void SolarSystem::populateSolarSystem(void)
   std::uniform_real_distribution<double> distribution(0.0,1.0);
 
   // initialize empty map 
-  for (int y=0; y<x_au; y++)
+  for (int x=0; x<x_au; x++)
   {
     std::vector<CelestialObject *> v_tmp;
-    for (int x=0; x<x_au; x++)
+    for (int y=0; y<y_au; y++)
       v_tmp.push_back(NULL);
     ss_map.push_back(v_tmp);
   }
@@ -72,11 +71,12 @@ void SolarSystem::populateSolarSystem(void)
     int num_objects = 0;
 
     double r;
+
     while(num_objects < min_objects)
     {
-      for (int y=0; y<y_au; y++)
+      for (int x=0; x<x_au; x++)
       {
-        for (int x=0; x<x_au; x++)
+        for (int y=0; y<y_au; y++)
         {
           if(ss_map[x][y] != NULL) continue;
 
@@ -105,7 +105,10 @@ void SolarSystem::populateSolarSystem(void)
 
 void SolarSystem::DebugPrintSolarSystem(void)
 {
-  std::cout << "Debug Solar System Map : " << std::endl;
+  std::cout << "Debug Solar System Map (" <<
+  x_pos << "," << y_pos <<
+  ") Density : " << type << std::endl;
+
   for(int y=0; y<y_au; y++)
   {
     for(int x=0; x<x_au; x++)
@@ -128,4 +131,5 @@ void SolarSystem::DebugPrintSolarSystem(void)
     }
     std::cout << std::endl;
   } 
+  std::cout << std::endl;
 }

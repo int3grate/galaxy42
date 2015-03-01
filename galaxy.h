@@ -12,8 +12,8 @@
 class Galaxy {
     std::vector<std::vector<SolarSystem *> > galaxy_map;
     int x_parsecs, y_parsecs;
-    static const int x_default_width = 20;
-    static const int y_default_width = 20;
+    static const int x_default_width = 10;
+    static const int y_default_width = 10;
  
     void setupNewGame (void);
 
