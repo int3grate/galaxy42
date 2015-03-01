@@ -11,6 +11,7 @@
 #include "planet.h"
 #include "asteroid.h"
 #include "nebula.h"
+#include "stargate.h"
 /*
 #include "wormhole.h"
 */
@@ -25,7 +26,7 @@ class SolarSystem {
 
     static const int debug_mode = 1;
 
-    static const int object_types = 4;
+    static const int object_types = 5;
     static const int num_ss_types = 3;
 
     static const int x_default_width = 20;
@@ -36,6 +37,8 @@ class SolarSystem {
 
     void populateSolarSystem(void);
     std::vector<std::vector<CelestialObject *> > ss_map;
+
+    Stargate * stargate;
 
   public:
     int type;

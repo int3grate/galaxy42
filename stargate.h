@@ -1,9 +1,12 @@
 #ifndef STARGATE
 #define STARGATE
 
-class Stargate : public CelestialOject  {
+#include "celestial_object.h"
 
+class Stargate : public CelestialObject  {
 
+  public:
+    Stargate(int x, int y);
 };
 
 #endif
