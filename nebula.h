@@ -6,7 +6,7 @@
 class Nebula : public CelestialObject {
 
   public:
-    Nebula(int x, int y);
+    Nebula(int x, int y, SolarSystem *s);
 };
 
 #endif

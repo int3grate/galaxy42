@@ -1,6 +1,6 @@
 #include "sun.h"
 
-Sun::Sun(int x, int y) : CelestialObject(x, y)
+Sun::Sun(int x, int y, SolarSystem *s) : CelestialObject(x, y,s)
 {
   min_objects = 1;
   max_objects = 2;

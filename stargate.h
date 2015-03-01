@@ -6,7 +6,7 @@
 class Stargate : public CelestialObject  {
 
   public:
-    Stargate(int x, int y);
+    Stargate(int x, int y, SolarSystem *s);
 };
 
 #endif

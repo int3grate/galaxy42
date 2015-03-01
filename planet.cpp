@@ -1,6 +1,6 @@
 #include "planet.h"
 
-Planet::Planet(int x, int y) : CelestialObject(x,y)
+Planet::Planet(int x, int y, SolarSystem *s) : CelestialObject(x,y,s)
 {
   min_objects = 5;
   max_objects = 30;

@@ -9,7 +9,7 @@ class Sun : public CelestialObject {
   int mass;
 
   public:
-    Sun (int x, int y);
+    Sun (int x, int y, SolarSystem *s);
     int getMass(void);
     
 };

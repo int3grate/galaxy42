@@ -45,32 +45,32 @@ void SolarSystem::populateSolarSystem(void)
 
     if(i == SS_SUN)
     {
-      Sun sun(0,0);
+      Sun sun(0,0,this);
       celestial_object = &sun;
     }
     else if(i == SS_PLANET)
     {
-      Planet planet(0,0);
+      Planet planet(0,0,this);
       celestial_object = &planet;
     }
     else if(i == SS_ASTEROID)
     {
-      Asteroid asteroid(0,0);
+      Asteroid asteroid(0,0,this);
       celestial_object = &asteroid;
     }
     else if(i == SS_NEBULA)
     {
-      Nebula nebula(0,0);
+      Nebula nebula(0,0,this);
       celestial_object = &nebula;
     }
     else if(i == SS_STARGATE)
     {
-      Stargate stargate(0,0);
+      Stargate stargate(0,0,this);
       celestial_object = &stargate;
     }
     else if(i == SS_WORMHOLE)
     {
-      Wormhole wormhole(0,0);
+      Wormhole wormhole(0,0,this);
       celestial_object = &wormhole;
     }
     int max_objects = celestial_object->getMaxObjects();
@@ -83,6 +83,7 @@ void SolarSystem::populateSolarSystem(void)
 
     while(num_objects < min_objects)
     {
+     // density loop
      for (int j=0; j<=type; j++)
       {
         for (int x=0; x<x_au; x++)
@@ -95,21 +96,21 @@ void SolarSystem::populateSolarSystem(void)
             if(r < prob)
             {
               if(i == SS_SUN)
-                ss_map[x][y] = new Sun(x, y);
+                ss_map[x][y] = new Sun(x, y, this);
               else if(i == SS_PLANET)
-                ss_map[x][y] = new Planet(x, y);
+                ss_map[x][y] = new Planet(x, y, this);
               else if(i == SS_ASTEROID)
-                ss_map[x][y] = new Asteroid(x, y);
+                ss_map[x][y] = new Asteroid(x, y, this);
               else if(i == SS_NEBULA)
-                ss_map[x][y] = new Nebula(x, y);
+                ss_map[x][y] = new Nebula(x, y, this);
               else if(i == SS_WORMHOLE)
               {
-                ss_map[x][y] = new Wormhole(x,y);
+                ss_map[x][y] = new Wormhole(x, y, this);
                 galaxy->wormholes.push_back((Wormhole *)ss_map[x][y]);
               }
               else if(i == SS_STARGATE)
               {
-                ss_map[x][y] = new Stargate(x, y);
+                ss_map[x][y] = new Stargate(x, y, this);
                 stargate = (Stargate *) ss_map[x][y];
               }
               num_objects++;

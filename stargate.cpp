@@ -1,6 +1,6 @@
 #include "stargate.h"
 
-Stargate::Stargate(int x, int y) : CelestialObject(x,y)
+Stargate::Stargate(int x, int y, SolarSystem *s) : CelestialObject(x,y,s)
 {
   min_objects = 1;
   max_objects = 1;

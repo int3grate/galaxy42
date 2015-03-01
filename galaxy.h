@@ -51,16 +51,16 @@ class SolarSystem {
     static const int x_default_width = 20;
     static const int y_default_width = 20;
     
-    int x_pos, y_pos;
     int x_au, y_au;
 
     void populateSolarSystem(void);
-    std::vector<std::vector<CelestialObject *> > ss_map;
 
     Stargate * stargate;
     Galaxy * galaxy;
 
   public:
+    std::vector<std::vector<CelestialObject *> > ss_map;
+    int x_pos, y_pos;
     int type;
     SolarSystem (int x, int y, Galaxy * g);
     void setSize(int x, int y); 

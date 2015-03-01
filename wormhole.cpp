@@ -1,6 +1,6 @@
 #include "wormhole.h"
 
-Wormhole::Wormhole(int x, int y) : CelestialObject(x, y)
+Wormhole::Wormhole(int x, int y, SolarSystem *s) : CelestialObject(x,y,s)
 {
   min_objects = 2;
   max_objects = 10;

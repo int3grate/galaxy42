@@ -5,6 +5,8 @@
 
 enum SS_OBJECTS {SS_SUN, SS_PLANET, SS_ASTEROID, SS_NEBULA, SS_STARGATE, SS_WORMHOLE};
 
+class SolarSystem;
+
 class CelestialObject {
 
   protected:
@@ -20,7 +22,8 @@ class CelestialObject {
     int getMaxObjects(void);
     int getMinObjects(void);
     double getProbability(void);
-    CelestialObject(int x, int y);
+    CelestialObject(int x, int y, SolarSystem * s);
+    SolarSystem * solar_system;
 };
 
 #endif

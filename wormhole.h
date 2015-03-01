@@ -6,7 +6,7 @@
 class Wormhole : public CelestialObject {
 
   public:
-    Wormhole(int x, int y);
+    Wormhole(int x, int y, SolarSystem *s);
     Wormhole * sister;
 
 };

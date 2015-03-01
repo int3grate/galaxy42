@@ -6,7 +6,7 @@
 class Asteroid : public CelestialObject {
 
   public:
-    Asteroid(int x, int y);
+    Asteroid(int x, int y, SolarSystem * s);
 
 };
 

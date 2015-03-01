@@ -71,6 +71,19 @@ void Galaxy::DebugPrintGalaxy(void)
 void Galaxy::configureWormholes(void)
 {
   // make even number of wormholes
+  if(wormholes.size() % 2 != 0)
+  {
+    // delete one wormhole to get an even number
+    Wormhole * wh;
+    wh = wormholes.back();
+    wormholes.pop_back();
+    int x_coord = wh->solar_system->x_pos;
+    int y_coord = wh->solar_system->y_pos;
+    
+    wh->solar_system->ss_map[x_coord][y_coord] = NULL;
+    delete wh;
+  }
+  
   // select two at a time and link them
   // return
 }
