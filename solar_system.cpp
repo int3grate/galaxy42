@@ -102,14 +102,13 @@ void SolarSystem::populateSolarSystem(void)
                 ss_map[x][y] = new Asteroid(x, y);
               else if(i == SS_NEBULA)
                 ss_map[x][y] = new Nebula(x, y);
+              else if(i == SS_WORMHOLE)
+                ss_map[x][y] = new Wormhole(x,y);
               else if(i == SS_STARGATE)
               {
                 ss_map[x][y] = new Stargate(x, y);
                 stargate = (Stargate *) ss_map[x][y];
               }
-              else if(i == SS_WORMHOLE)
-                ss_map[x][y] = new Wormhole(x,y);
-
               num_objects++;
               if(num_objects >= max_objects) break;
             }
