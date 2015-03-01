@@ -31,6 +31,8 @@ class Galaxy {
 
     enum SS_TYPES {TYPE_SPARSE, TYPE_NORMAL, TYPE_DENSE};
 
+    void configureWormholes(void);
+
   public:
     std::vector<Wormhole *> wormholes;
     Galaxy (int x_parsecs, int y_parsecs); 
