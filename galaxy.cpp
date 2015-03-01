@@ -64,3 +64,11 @@ void Galaxy::DebugPrintGalaxy(void)
     std::cout << std::endl;
   } 
 }
+
+// TBD
+void Galaxy::configureWormholes(void)
+{
+  // make even number of wormholes
+  // select two at a time and link them
+  // return
+}
