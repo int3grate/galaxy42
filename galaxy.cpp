@@ -24,8 +24,6 @@ void Galaxy::setupNewGame()
   std::uniform_real_distribution<double> distribution(0.0,1.0);
   double r;
 
-  int num_ss = 0;
-
   for (int x=0; x<x_parsecs; x++)
   {
     std::vector<SolarSystem *> v_tmp;
@@ -36,7 +34,6 @@ void Galaxy::setupNewGame()
         v_tmp.push_back(new SolarSystem(x, y, this));
       else
         v_tmp.push_back(NULL);
-      num_ss ++;
     }
     galaxy_map.push_back(v_tmp);
   }
