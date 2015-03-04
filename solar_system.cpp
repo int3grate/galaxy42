@@ -11,7 +11,7 @@ SolarSystem::SolarSystem(int x, int y, Galaxy * g)
   y_pos = y;
   galaxy = g;
 
-  setSize(x_default_width, y_default_width);
+  setSize(galaxy->x_ss_width, galaxy->y_ss_width);
 
   populateSolarSystem();
 

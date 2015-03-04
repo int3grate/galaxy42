@@ -3,8 +3,11 @@
 // constructors
 Galaxy::Galaxy()
 {
-  x_parsecs = x_default_width;
-  y_parsecs = y_default_width;
+  x_parsecs = x_galaxy_width;
+  y_parsecs = y_galaxy_width;
+
+  y_ss_au = y_ss_width;
+  x_ss_au = x_ss_width;
 
   setupNewGame(); 
 }
@@ -13,6 +16,10 @@ Galaxy::Galaxy(int x_size, int y_size)
 {
   x_parsecs = x_size;
   y_parsecs = y_size;
+
+  y_ss_au = y_ss_width;
+  x_ss_au = x_ss_width;
+
   setupNewGame();
 }
 
